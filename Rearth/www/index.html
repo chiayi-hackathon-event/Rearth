@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <title>Rearth</title>
+</head>
+<body>
+    <div id="init" data-role="page">
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">正在啟動</p>
+                <p class="event received">啟動完成<br />若無跳轉請點我</p>
+            </div>
+            <a href="#home" id="initfinish" style="display: none;"></a>
+        </div>
+    </div>
+    <div id="home" data-role="page">
+        <div id="search" data-role="panel" data-position="left" data-display="overlay">
+            <a href="#info" id="infourl" style="display: none;"></a>
+            <a id="SearchCode" class="ui-btn">掃條碼</a>
+            <ol id="SearchBox" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="請輸入物品名稱" data-filter-reveal="true"></ol>
+        </div>
+        <div data-role="header" data-position="fixed">
+            <h3>回收資源</h3>
+        </div>
+        <div role="main" class="ui-content">
+            <table cellpadding="0" cellspacing="0" border="0" class="home-center">
+                <tr>
+                    <td width="100%" align="center" valign="middle">
+                        <div class="home-logo"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" align="right" valign="middle">
+                        <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                            <tr width="100%" class="home-center-line1">
+                                <td width="50%" align="right" valign="middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="home-center-ui">
+                                        <tr>
+                                            <td width="100%" align="center" valign="middle" class="home-info">
+                                                <div>回收資訊</div>
+                                                <a href="#search" style="display: none;"></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="50%" align="left" valign="middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="home-center-ui">
+                                        <tr>
+                                            <td width="100%" align="center" valign="middle" class="home-map">
+                                                <div>回收場資訊</div>
+                                                <a href="#map" style="display: none;"></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" align="right" valign="middle">
+                        <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                            <tr class="home-center-line2">
+                                <td width="50%" align="right" valign="middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="home-center-ui">
+                                        <tr>
+                                            <td width="100%" align="center" valign="middle" class="home-about">
+                                                <div>關於我們</div>
+                                                <a href="#" style="display: none;"></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="50%" align="left" valign="middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="home-center-ui">
+                                        <tr>
+                                            <td width="100%" align="center" valign="middle" class="home-tip">
+                                                <div>小助手</div>
+                                                <a href="#" style="display: none;"></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div data-role="page" id="info">
+        <div data-role="header" data-theme="b" data-add-back-btn="true" data-back-btn-text="返回">
+            <h1>產品資訊</h1>
+        </div>
+        <div id="info-content" role="main" class="ui-content info-img">
+            
+        </div>
+    </div>
+    <div data-role="page" id="map">
+        <div data-role="header" data-theme="b" data-add-back-btn="true" data-back-btn-text="返回">
+            <h1>回收場分布</h1>
+        </div>
+        <div role="main" class="ui-content" style="padding:0px">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-left" id="btn_showmap">顯示地圖</a>
+            <div id="map_div"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

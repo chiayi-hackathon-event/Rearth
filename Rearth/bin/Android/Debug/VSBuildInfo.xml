@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--此檔案因遙測目的而由 VS 建置流程所產生。-->
+<VSBuildInfo xmlns="http://schemas.microsoft.com/developer/appx/2012/build">
+  <Metadata>
+    <Item Name="VisualStudio" Version="15.0" />
+    <Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2017" />
+    <Item Name="OperatingSystem" Version="10.0.10240.16384 (th1.150709-1700)" />
+    <Item Name="ProjectGUID" Value="7a702b21-7c18-47bd-8134-8ed410df7606" />
+  </Metadata>
+</VSBuildInfo>
